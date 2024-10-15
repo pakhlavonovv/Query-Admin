@@ -27,7 +27,6 @@ const Index = () => {
     const onFinish = (values: any) => {
         console.log('Success:', values);
 
-        // Mutate orqali login qilish
         mutate(
             { phone_number: `998${values.phone_number}`, password: values.password },
             {
@@ -109,7 +108,7 @@ const Index = () => {
                                 style={{backgroundColor: "#BC8E5B"}} 
                                 className='w-full h-10 p-3 text-white' 
                                 htmlType="submit"
-                                loading={isLoading}  // Loading holatini ko'rsatish
+                                // loading={isLoading}  
                             >
                                 Login
                             </Button>

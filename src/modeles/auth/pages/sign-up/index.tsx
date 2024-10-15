@@ -14,7 +14,7 @@ export default function SignUpPage() {
   const screens = useBreakpoint();
   const navigate = useNavigate();
 
-  const { mutate, isLoading, isError, error } = useSignUpMutation<SignUpType>();
+  const { mutate, isError, error } = useSignUpMutation<SignUpType>();
 
   const [api, contextHolder] = notification.useNotification();
 
@@ -34,7 +34,6 @@ export default function SignUpPage() {
     window.localStorage.setItem("email", values.email);
     window.localStorage.setItem("password", values.password);
 
-    // Mutate for sign-up API call
     mutate(
       { ...values, phone_number: `998${values.phone_number}` },
       {
@@ -143,7 +142,6 @@ export default function SignUpPage() {
               style={{ backgroundColor: "#BC8E5B" }}
               className="text-white"
               htmlType="submit"
-              loading={isLoading} // Loading state while signing up
             >
               Sign up
             </Button>
