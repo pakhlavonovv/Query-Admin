@@ -25,6 +25,8 @@ const Index = () => {
     }, [isError, error, api]);
 
     const onFinish = (values: any) => {
+        navigate('/admin-layout/category');
+
         console.log('Success:', values);
 
         mutate(
@@ -33,8 +35,7 @@ const Index = () => {
                 onSuccess: (data) => {
                     const access_token = data?.data?.tokens?.access_token;
                     localStorage.setItem("access_token", access_token);
-                    navigate('/admin-layout/category');
-                },
+                }
             }
         );
     };

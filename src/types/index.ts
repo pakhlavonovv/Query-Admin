@@ -10,3 +10,8 @@ export interface SignUpType {
     password: string;
   }
   
+export interface ParamsType {
+    limit: number,
+    page: number,
+    search: string
+}
