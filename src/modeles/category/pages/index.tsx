@@ -74,7 +74,7 @@ const Index = () => {
       <CategoryModal
         visible={modalVisible}
         onClose={() => setModalVisible(false)}
-        category={editingCategory}
+        // category={editingCategory}
       />
     </>
   );
