@@ -13,7 +13,7 @@ const Index = () => {
     const navigate = useNavigate();
     const [api, contextHolder] = notification.useNotification();
 
-    const { mutate, isError, error } = useSignInMutation<SignInType>();
+    const { mutate, isError, error } = useSignInMutation();
 
     useEffect(() => {
         if (isError) {
@@ -29,7 +29,7 @@ const Index = () => {
 
         console.log('Success:', values);
 
-        mutate(
+        mutate<SignInType>(
             { phone_number: `998${values.phone_number}`, password: values.password },
             {
                 onSuccess: (data) => {

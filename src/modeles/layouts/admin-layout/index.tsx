@@ -17,7 +17,14 @@ const App: React.FC = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
-
+  const removeToken = () => {
+    window.localStorage.removeItem('access_token')
+    window.localStorage.removeItem("first_name")
+    window.localStorage.removeItem("last_name")
+    window.localStorage.removeItem("phone_number")
+    window.localStorage.removeItem("email")
+    window.localStorage.removeItem("password")
+  }
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
