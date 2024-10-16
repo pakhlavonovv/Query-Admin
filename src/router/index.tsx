@@ -9,9 +9,10 @@ import App from "../App";
 import {
    SignIn,
    SignUp,
-   Category
+   Category,
+   AdminLayout
 } from "../modeles/index"
-import AdminLayout from '../modeles/layouts/admin-layout'
+// import AdminLayout from '../modeles/layouts/admin-layout'
 
 const Index = () => {
    const router = createBrowserRouter(
@@ -19,9 +20,9 @@ const Index = () => {
          <Route path="/" element={<App />}>
             <Route index element={<SignIn />} />
             <Route path="sign-up" element={<SignUp />} />
-            {/* <Route path="admin-layout" element={<AdminLayout />}>
+            <Route path="admin-layout" element={<AdminLayout />}>
                <Route path="category" element={<Category />} />
-            </Route>  */}
+            </Route> 
          </Route>
       )
    );
