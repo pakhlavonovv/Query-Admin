@@ -5,5 +5,5 @@ export function useGetCategory(params: ParamsType){
     return useQuery({
         queryKey: ["category", params], 
         queryFn: () => getCategory(params)
-    })
+    });
 }

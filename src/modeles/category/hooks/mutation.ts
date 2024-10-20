@@ -18,6 +18,7 @@ export function useCreateCategory() {
   });
 }
 
+
 export function useUpdateCategory() {
   const queryClient = useQueryClient();
 
